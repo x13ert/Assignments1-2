@@ -61,8 +61,8 @@ def save_file(text):
     fname = f'scraped_articles/{name}.txt'
 
     # Code here - write a file using with (2 lines)
-    with open(os.path.join("./scraped_articles", name + ".txt"), 'w', encoding='utf-8') as output:
-        output.write(clean(text))
+    output = open(os.path.join(".", "scraped_articles", name + ".txt"), 'w', encoding='utf-8')
+    output.write(clean(text))
     # Code ends here
 
     print(f'File saved in directory {fname}')
